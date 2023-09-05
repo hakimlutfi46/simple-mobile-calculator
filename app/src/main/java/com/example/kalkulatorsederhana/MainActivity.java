@@ -140,6 +140,10 @@ public class MainActivity extends AppCompatActivity {
                 hasil.setText("0");
                 angka1.clearFocus();
                 angka2.clearFocus();
+
+                InputMethodManager imm = (InputMethodManager)getSystemService(
+                        Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(angka2.getWindowToken(), 0);
             }
         });
     }
