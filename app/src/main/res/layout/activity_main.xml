@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="KALKULATOR SEDERHANA"
+            android:textColor="#00c2c3"
+            android:textSize="50dp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/containerText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/head"
+            android:layout_marginTop="30dp">
+
+            <EditText
+                android:id="@+id/tf_angka1"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                android:hint="Input angka pertama"
+                android:inputType="number"
+                android:textSize="23sp" />
+
+
+            <EditText
+                android:id="@+id/tf_angka2"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_below="@id/tf_angka1"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:hint="Input angka kedua"
+                android:inputType="number"
+                android:textSize="23sp" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/containerBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/containerText"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center"
+            android:weightSum="4">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_tambah"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                app:backgroundTint="#00c2c3"
+                app:cornerRadius="15dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="5dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_kurang"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                app:backgroundTint="#00c2c3"
+                app:cornerRadius="15dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="5dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_kali"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                app:backgroundTint="#00c2c3"
+                app:cornerRadius="15dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="5dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_bagi"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                app:backgroundTint="#00c2c3"
+                app:cornerRadius="15dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="5dp"/>
+
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_clear"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_below="@+id/containerBtn"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="30dp"
+            android:text="Clear"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:backgroundTint="#00c2c3"
+            app:cornerRadius="15dp" />
+
+        <TextView
+            android:id="@+id/lbl_setHasil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_clear"
+            android:layout_marginTop="20sp"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="#00c2c3"
+            android:textSize="45sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</LinearLayout>
